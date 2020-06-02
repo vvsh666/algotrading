@@ -474,13 +474,40 @@ h1, h2, h3, h4, h5 {
     .why__card-heading {
       text-align: center; }
     .why__card-text {
-      text-align: center; } }
+      text-align: center; }
+  .create {
+    padding-top: 0; }
+    .create__row {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .create__col-30 {
+      width: 40%;
+      margin: 0 auto; }
+      .create__col-30:first-child {
+        width: 100%; }
+    .create__title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 25rem; }
+    .create__text {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 25rem; } }
 
 @media screen and (max-width: 760px) {
   .hero__title {
     font-size: 3.5rem; }
   .hero__subtitle {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .create__col-30 {
+    width: 51%;
+    margin: 0 auto; }
+    .create__col-30:first-child {
+      width: 100%; } }
 
 @media screen and (max-width: 570px) {
   .hero__title {
@@ -496,7 +523,11 @@ h1, h2, h3, h4, h5 {
       max-width: 80%; }
   .why__tag-number {
     font-size: 15rem;
-    line-height: 12rem; } }
+    line-height: 12rem; }
+  .create__col-30 {
+    width: 100%; }
+  .create__button {
+    width: 22rem; } }
 
 @media screen and (max-width: 420px) {
   .phone {
