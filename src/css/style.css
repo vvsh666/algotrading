@@ -3,6 +3,20 @@
   width: 90%;
   margin: 0 auto; }
 
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -22,6 +36,18 @@ h1, h2, h3, h4, h5 {
 
 .section {
   padding: 7.375rem 0; }
+  .section-header {
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 1.17;
+    margin: 0 auto;
+    text-align: center; }
+  .section-descr {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center; }
 
 .button {
   min-height: 3rem;
@@ -204,7 +230,7 @@ h1, h2, h3, h4, h5 {
       margin-bottom: 0.75rem; }
 
 .why {
-  padding-bottom: 5rem; }
+  padding-bottom: 7.7rem; }
   .why__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -310,6 +336,77 @@ h1, h2, h3, h4, h5 {
     .why__card-text {
       margin-left: 0.2rem;
       line-height: 1.5; }
+
+.create__section-header {
+  max-width: 31rem;
+  margin-bottom: 1.35rem; }
+
+.create__section-descr {
+  max-width: 22.2rem;
+  margin-bottom: 4rem; }
+
+.create__col-30 {
+  width: 31.5%; }
+
+.create__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.21;
+  max-width: 17rem;
+  margin-bottom: 1.9rem; }
+  .create__title--bold {
+    font-weight: 700; }
+
+.create__text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 11.5rem; }
+
+.create__input {
+  max-width: 6.125rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #cfdeee;
+  color: #000000; }
+  .create__input::-webkit-input-placeholder {
+    color: #000000; }
+  .create__input::-moz-placeholder {
+    color: #000000; }
+  .create__input:-ms-input-placeholder {
+    color: #000000; }
+  .create__input::-ms-input-placeholder {
+    color: #000000; }
+  .create__input::placeholder {
+    color: #000000; }
+  .create__input-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 4.5rem; }
+
+.create__label {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-left: 2rem;
+  max-width: 12.5rem; }
+
+.create__button {
+  width: 22.6rem;
+  display: block;
+  margin: 0 auto; }
 
 @media screen and (max-width: 1300px) {
   html {
