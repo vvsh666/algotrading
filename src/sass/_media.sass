@@ -5,6 +5,11 @@
 @media screen and ( max-width: 1200px )
   html
     font-size: 14px
+  .why
+    &__col
+      width: 50%
+    &__card
+      width: 49%
 
 @media screen and ( max-width: 1100px )
   html
@@ -13,6 +18,87 @@
 @media screen and ( max-width: 992px )
   .nav
     display: none
+  .hero
+    padding-top: 6rem
+    padding-bottom: 25rem
+    background-image: none
+    background-color: $input-border
+  .why
+    &__wrapper
+      flex-wrap: wrap
+    &__col
+      width: 100%
+    &__title
+      margin-top: -17rem
+      margin-left: auto
+      margin-right: auto
+    &__tag
+      justify-content: center
+    &__heading
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+    &__text
+      max-width: 20rem
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+    &__row
+      flex-wrap: wrap
+    &__card
+      width: 100%
+      max-width: 70%
+      margin-top: 4rem
+      margin-left: auto
+      margin-right: auto
+      &:first-child
+        margin-bottom: 0
+      &-image
+        margin-bottom: 3rem
+
+@media screen and ( max-width: 760px )
+  .hero
+    &__title
+      font-size: 3.5rem
+    &__subtitle
+      font-size: 2rem
+
+@media screen and ( max-width: 570px )
+  .hero
+    &__title
+      font-size: 2.3rem
+    &__subtitle
+      font-size: 1.5rem
+    &__block
+      flex-wrap: wrap
+      &-text
+        margin-top: 2rem
+        max-width: 80%
+  .why
+    &__tag
+      &-number
+        font-size: 15rem;
+        line-height: 12rem;
+
+@media screen and ( max-width: 420px )
+  .phone
+    font-size: 1.1rem
+  .logo
+    &__img
+      max-width: 1.3rem
+    &__text
+      font-size: 1.4rem
+
+  .hero
+    &__block
+      &-buttons
+        width: 100%
+        margin-right: 0
+    &__button
+      width: 100%
+        
+
+
 
 // Медиазапрос для Hover эффектов
 @media screen and ( min-width: 991px )
