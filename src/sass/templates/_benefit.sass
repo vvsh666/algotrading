@@ -1,0 +1,75 @@
+.benefit
+  height: 57rem
+  background-color: $border-line
+  &__section
+    &-header
+      max-width: 30rem
+  &__wrapper
+    position: relative
+    width: 51.3rem
+    height: 44.5rem
+    margin: 0 auto
+  &__img
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+  &__button
+    &-prev
+      position: absolute
+      bottom: 16.25rem
+      left: 3.125rem
+      outline: none
+    &-next
+      position: absolute
+      bottom: 16.25rem
+      right: 3.125rem
+      outline: none
+  &__swiper
+    &-container
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 19.7rem
+      overflow: hidden
+      &-prev
+        position: absolute
+        z-index: 99
+        bottom: 14.3rem
+        left: 3.125rem
+        max-width: 10rem
+        overflow: hidden
+      &-next
+        position: absolute
+        z-index: 99
+        bottom: 14.3rem
+        right: 3.125rem
+        max-width: 10rem
+        overflow: hidden
+    &-wrapper
+      margin: 0 auto
+  &__slide
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-bottom: 8.125rem
+    &-image
+      max-width: 9.5rem
+      margin-bottom: 2.75rem
+    &-icon
+      width: 100%
+    &-title
+      font-size: 1.5rem
+      font-weight: 700
+      margin-bottom: 1.6rem
+    &-text
+      text-align: center
+      line-height: 1.5
+      &-prev
+        text-align: left
+      &-next
+        text-align: right
+    
