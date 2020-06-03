@@ -53,7 +53,24 @@ $(document).ready(function () {
     },
   });
 
+  // Видео в секции Simple
 
+  var player;
+  $('.simple__video-play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: 'jT8u8cawcsI',
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  });
+
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  };
 
 
   
