@@ -1,11 +1,11 @@
 $(document).ready(function () {
   
   // Переключение меню
-  $('.nav__item').on('click', function(){
+/*   $('.nav__item').on('click', function(){
     console.log($('.nav__item'));
     $('.nav__item:focus').addClass('nav__item--activ').sibling().removeClass('nav__item--activ')
   });
-
+ */
   // Слайдер секции Benefit
 
   var benefitSwiperPrev = new Swiper('.benefit__swiper-container-prev', {
@@ -66,7 +66,6 @@ $(document).ready(function () {
       }
     });
   });
-
 
   function onPlayerReady(event) {
     event.target.playVideo();

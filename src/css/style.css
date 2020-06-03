@@ -598,6 +598,57 @@ h1, h2, h3, h4, h5 {
   width: 34.6rem;
   margin: 0 auto; }
 
+.format__section-header {
+  margin-bottom: 3.8rem; }
+
+.format__slide {
+  width: 48.7%;
+  padding: 11.1rem 2.94rem 2.5rem;
+  margin-bottom: 4rem; }
+  .format__slide:first-child {
+    background: url("../img/format-1.jpg") no-repeat center/cover; }
+  .format__slide:last-child {
+    background: url("../img/format-2.jpg") no-repeat center/cover; }
+  .format__slide-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 1.6rem; }
+  .format__slide-text {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ffffff; }
+
+.format__card {
+  width: 23.2%; }
+  .format__card-image {
+    height: 4.7rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: 2.8rem; }
+  .format__card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    color: #0f1c2e; }
+  .format__card-text {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #061826; }
+
 @media screen and (max-width: 1300px) {
   html {
     font-size: 15px; } }
@@ -686,7 +737,16 @@ h1, h2, h3, h4, h5 {
       margin-right: auto;
       margin-bottom: 2rem;
       text-align: center;
-      max-width: 25rem; } }
+      max-width: 25rem; }
+  .format__row {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .format__slide {
+    width: 100%; }
+  .format__card {
+    width: 49%;
+    margin-bottom: 4rem; } }
 
 @media screen and (max-width: 760px) {
   .hero__title {
@@ -732,7 +792,12 @@ h1, h2, h3, h4, h5 {
   .create__button {
     width: 22rem; }
   .simple__button {
-    display: none; } }
+    display: none; }
+  .format__card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center; } }
 
 @media screen and (max-width: 420px) {
   .phone {
@@ -745,7 +810,9 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     margin-right: 0; }
   .hero__button {
-    width: 100%; } }
+    width: 100%; }
+  .format__slide {
+    padding-left: 1.5rem; } }
 
 @media screen and (min-width: 991px) {
   .button:hover {
