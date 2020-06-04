@@ -94,6 +94,12 @@
     &__card
       width: 45%
       margin-bottom: 4rem
+  .lessons
+    &__col-50
+      width: 90%
+    &__swiper
+      &-container
+        width: 100%
 
 
 @media screen and ( max-width: 760px )
@@ -125,6 +131,30 @@
         display: none
       &-next
         display: none
+  .lessons
+    padding-top: 3rem
+    &-prep
+      &__swiper
+        &-container
+          margin-bottom: 2rem
+    &__line
+      margin-bottom: 2rem
+    &__bonus
+      margin-bottom: 2rem
+    &__button
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 2rem
+    &__arrow
+      &-block
+        &-prev, &-next
+          width: 50%
+          flex-grow: 0
+          margin-bottom: 2rem
+        &-prev
+          order: -2
+        &-next
+          order: -1
 
 @media screen and ( max-width: 570px )
   .hero
@@ -156,6 +186,19 @@
       margin-right: auto
       width: 90%
       text-align: center
+  .lessons
+    &__swiper
+      &-slide
+        &-descr
+          margin-bottom: 1rem
+    &__numeration
+      flex-wrap: wrap
+    &__number
+      width: 100%
+      margin-bottom: 1rem
+    &__swiper
+      &-pagination
+        margin-left: 0
 
 @media screen and ( max-width: 420px )
   .phone

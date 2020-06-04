@@ -679,6 +679,7 @@ h1, h2, h3, h4, h5 {
 
 .lessons {
   padding-top: 6.9rem;
+  padding-bottom: 7.4rem;
   background-image: -o-radial-gradient(#03256c, #061826);
   background-image: radial-gradient(#03256c, #061826); }
   .lessons__row {
@@ -689,7 +690,10 @@ h1, h2, h3, h4, h5 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .lessons__col-50 {
     width: 48.7%; }
   .lessons__swiper-container {
@@ -972,7 +976,11 @@ h1, h2, h3, h4, h5 {
     flex-wrap: wrap; }
   .process__card {
     width: 45%;
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+  .lessons__col-50 {
+    width: 90%; }
+  .lessons__swiper-container {
+    width: 100%; } }
 
 @media screen and (max-width: 760px) {
   .hero__title {
@@ -996,7 +1004,36 @@ h1, h2, h3, h4, h5 {
   .benefit__button-prev {
     display: none; }
   .benefit__button-next {
-    display: none; } }
+    display: none; }
+  .lessons {
+    padding-top: 3rem; }
+    .lessons-prep__swiper-container {
+      margin-bottom: 2rem; }
+    .lessons__line {
+      margin-bottom: 2rem; }
+    .lessons__bonus {
+      margin-bottom: 2rem; }
+    .lessons__button {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem; }
+    .lessons__arrow-block-prev, .lessons__arrow-block-next {
+      width: 50%;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      margin-bottom: 2rem; }
+    .lessons__arrow-block-prev {
+      -webkit-box-ordinal-group: -1;
+      -webkit-order: -2;
+      -ms-flex-order: -2;
+      order: -2; }
+    .lessons__arrow-block-next {
+      -webkit-box-ordinal-group: 0;
+      -webkit-order: -1;
+      -ms-flex-order: -1;
+      order: -1; } }
 
 @media screen and (max-width: 570px) {
   .hero__title {
@@ -1023,7 +1060,18 @@ h1, h2, h3, h4, h5 {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    text-align: center; } }
+    text-align: center; }
+  .lessons__swiper-slide-descr {
+    margin-bottom: 1rem; }
+  .lessons__numeration {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .lessons__number {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .lessons__swiper-pagination {
+    margin-left: 0; } }
 
 @media screen and (max-width: 420px) {
   .phone {
