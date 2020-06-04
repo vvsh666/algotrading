@@ -71,7 +71,51 @@ $(document).ready(function () {
     event.target.playVideo();
   };
 
+  // Слайдер секции lessons
 
+  var lessonsPrepSwiper = new Swiper('.lessons-prep__swiper-container', {
+    speed: 400,
+    loop: false,
+    spaceBetween: 100,
+    centeredSlides: true,
+    controller: {
+      control: lessonsSwiper,
+      by: 'slide',
+    },
+    pagination: {
+      el: '.lessons__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.lessons__arrow-next',
+      prevEl: '.lessons__arrow-prev',
+    },
+  });
+
+  var lessonsSwiper = new Swiper('.lessons__swiper-container', {
+    speed: 400,
+    loop: false,
+    spaceBetween: 100,
+    centeredSlides: true,
+    controller: {
+      control: lessonsPrepSwiper,
+      by: 'slide',
+    },
+    pagination: {
+      el: '.lessons__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.lessons__arrow-next',
+      prevEl: '.lessons__arrow-prev',
+    },
+  });
   
 
 });

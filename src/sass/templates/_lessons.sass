@@ -1,0 +1,144 @@
+.lessons
+  padding-top: 6.9rem
+  background-image: radial-gradient(#03256c, $text-primary)
+  &__row
+    display: flex
+    justify-content: space-between
+  &__col-50
+    width: 48.7%
+  &__swiper
+    &-container
+      width: 90%
+      overflow: hidden
+    &-slide
+      &-title
+        font-size: 2.25rem
+        font-weight: 700
+        color: $light
+        margin-bottom: 4.2rem
+      &-subtitle
+        font-size: 1.5rem
+        font-weight: 700
+        color: $light
+        margin-bottom: 2rem
+      &-item
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        font-size: 1.5rem
+        font-weight: 300
+        line-height: 1.2
+        color: $light
+        margin-bottom: 1rem
+        &-marker
+          font-size: 1rem
+          line-height: 2
+          color: $text-medium
+          text-transform: uppercase
+          margin-right: 1rem
+      &-descr
+        font-size: 1rem
+        font-weight: 300
+        line-height: 1.5
+        color: $text-medium
+        margin-top: 2.9rem
+        margin-left: 1.8rem
+    &-pagination
+      margin-left: 3.3rem
+  &__numeration
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-top: 0.7rem
+    margin-bottom: 3.9rem
+  &__number
+    font-size: 1rem
+    font-weight: 300
+    color: $text-medium
+  &-prep
+    &__swiper
+      &-container
+        width: 90%
+        overflow: hidden
+        margin-bottom: 4rem
+      &-slide
+        &-title
+          font-size: 1.5rem
+          font-weight: 700
+          color: $light
+          margin-bottom: 2.3rem
+        &-item
+          width: 90%
+          display: flex
+          justify-content: flex-start
+          align-items: flex-start
+          font-size: 1rem
+          font-weight: 300
+          line-height: 1.5
+          color: $light
+          &-marker
+            font-size: 1rem
+            line-height: 1.5
+            color: $text-medium
+            text-transform: uppercase
+            margin-right: 1rem
+  &__line
+    max-width: 28.5rem
+    width: 100%
+    height: 1px
+    background-color: #26556c
+    opacity: 0.5
+    margin-bottom: 4.7rem
+  &__bonus
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    margin-bottom: 5.8rem
+    &-title
+      font-size: 1.5rem
+      font-weight: 700
+      color: $light
+      margin-bottom: 1.7rem
+    &-descr
+      font-size: 1rem
+      font-weight: 300
+      line-height: 1.5
+      color: $text-medium
+      margin-left: 1.8rem
+      max-width: 21rem
+  &__button
+    width: 16.4rem
+    margin-left: 1rem
+    margin-right: 1rem
+  &__arrow
+    &-block
+      &-prev, &-next
+        flex-grow: 1
+        display: flex
+        align-items: center
+      &-prev
+        justify-content: flex-start
+      &-next
+        justify-content: flex-end
+
+
+.swiper
+  &-pagination
+    &-bullet
+      width: 2.2rem
+      height: 2.2rem
+      text-align: center
+      font-size: 1rem
+      font-weight: 300
+      color: $text-medium
+      line-height: 2.4
+      opacity: 1
+      background: transparent
+      &-active
+        color: $light
+        background: $text-digit
+  &-button
+    &-disabled
+      opacity: 0.5
+
+
