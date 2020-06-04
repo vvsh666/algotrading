@@ -872,6 +872,50 @@ h1, h2, h3, h4, h5 {
 .swiper-button-disabled {
   opacity: 0.5; }
 
+.advantage {
+  padding-top: 7rem; }
+  .advantage__section-header {
+    margin-bottom: 3.3rem; }
+  .advantage__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f1c2e;
+    text-align: center;
+    margin-bottom: 1.9rem; }
+  .advantage__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1.4rem; }
+  .advantage__card {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2rem; }
+    .advantage__card-img {
+      margin-bottom: 0.95rem; }
+    .advantage__card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #061826;
+      margin-bottom: 0.2rem; }
+    .advantage__card-text {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #061826; }
+
 @media screen and (max-width: 1300px) {
   html {
     font-size: 15px; } }
@@ -978,9 +1022,16 @@ h1, h2, h3, h4, h5 {
   .lessons__col-50 {
     width: 90%; }
   .lessons__swiper-container {
-    width: 100%; } }
+    width: 100%; }
+  .advantage__row {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .advantage__card {
+    width: 48%; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .hero__title {
     font-size: 3.5rem; }
   .hero__subtitle {
@@ -1033,7 +1084,7 @@ h1, h2, h3, h4, h5 {
       -ms-flex-order: -1;
       order: -1; } }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 576px) {
   .hero__title {
     font-size: 2.3rem; }
   .hero__subtitle {
@@ -1069,7 +1120,9 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     margin-bottom: 1rem; }
   .lessons__swiper-pagination {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .advantage__card {
+    width: 90%; } }
 
 @media screen and (max-width: 420px) {
   .phone {
