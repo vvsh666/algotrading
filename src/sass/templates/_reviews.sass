@@ -1,5 +1,14 @@
 .reviews
   padding-top: 6.9rem
+  padding-bottom: 0
+  & > .container
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 1px
+      background-color: $border-line
+      margin-top: 7rem //padding-bottom for reviews
   &__section
     &-header
       margin-bottom: 3.9rem
