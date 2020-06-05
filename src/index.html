@@ -39,8 +39,8 @@
           <p class="hero__descr">Всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
           <div class="hero__block">
             <div class="hero__block-buttons">
-              <button class="button button--primary hero__button">Начать обучение</button>
-              <button class="button button--outline hero__button">узнать подробнее</button>
+              <button class="button button--primary hero__button" data-toggle="modal">Начать обучение</button>
+              <button class="button button--outline hero__button" data-toggle="modal">узнать подробнее</button>
             </div>
             <div class="hero__block-text">Ваш собственный прибыльный торговый робот за <span class="hero__block-text hero__block-text--marker">30 дней!</span></div>
           </div>
@@ -118,7 +118,7 @@
       <div class="container">
         <div class="study__wrapper">
           <h2 class="study__text">Обучитесь алгоритмической торговле и&nbsp;уже <span class="study__text study__text--marker">через 30 дней</span> создайте своего&nbsp;эффективного торгового робота!</h2>
-          <button class="button study__button button--outline-light">Начать обучение</button>
+          <button class="button study__button button--outline-light" data-toggle="modal">Начать обучение</button>
         </div>
       </div>
     </section>
@@ -208,7 +208,7 @@
         </div>
         <h3 class="simple__subtitle">Реальный пример работы алгоритма</h3>
         <div class="simple__text">Меня с детства интересовал анализ процессов, которые происходят в мире финансов. Именно этот интерес меня подтолкнул получить высшее образование в сфере экономико-математического моделирования</div>
-        <button class="button button--primary simple__button">Приступить к созданию своего доходного робота</button>
+        <button class="button button--primary simple__button" data-toggle="modal">Приступить к созданию своего доходного робота</button>
       </div>
     </section>
 
@@ -619,8 +619,8 @@
 
         <div class="lessons__row">
           <div class="lessons__arrow-block-prev"><img src="img/lessons-arrow-prev.png" alt="Предыдущий" class="lessons__arrow-prev"></div>
-          <button class="button button--outline-light lessons__button">Узнать подробнее</button>
-          <button class="button button--primary lessons__button">Начать обучение</button>
+          <button class="button button--outline-light lessons__button" data-toggle="modal">Узнать подробнее</button>
+          <button class="button button--primary lessons__button" data-toggle="modal">Начать обучение</button>
           <div class="lessons__arrow-block-next"><img src="img/lessons-arrow-next.png" alt="Предыдущий" class="lessons__arrow-next"></div>
         </div>
 
@@ -681,7 +681,7 @@
             <div class="cost__card-item">Практика</div>
             <div class="cost__card-item">Ответы на вопросы</div>
             <div class="cost__card-item">Тех. поддержка</div>
-            <button class="button button--outline cost__button">Купить</button>
+            <button class="button button--outline cost__button" data-toggle="modal">Купить</button>
           </div>
           <div class="cost__card">
             <h3 class="cost__card-tariff">Premium</h3>
@@ -689,7 +689,7 @@
             <div class="cost__card-item">Обучение с куратором</div>
             <div class="cost__card-item">Постоянная возможность<br>связаться с преподователем</div>
             <div class="cost__card-item">Практика</div>
-            <button class="button button--outline cost__button">Купить</button>
+            <button class="button button--outline cost__button" data-toggle="modal">Купить</button>
           </div>
           <div class="cost__card">
             <h3 class="cost__card-tariff">VIP</h3>
@@ -697,16 +697,66 @@
             <div class="cost__card-item">Полностью индивидуальное<br>обучение!</div>
             <div class="cost__card-item">Индивидуальная<br>программа </div>
             <div class="cost__card-item">Максимум практики</div>
-            <button class="button button--outline cost__button">Купить</button>
+            <button class="button button--outline cost__button" data-toggle="modal">Купить</button>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="freevideo">
+      <div class="container">
+        <h2 class="freevideo__header">Получите первые видеоуроки совершенно бесплатно уже сейчас!</h2>
+        <div class="freevideo__descr">Просто внесите Ваши данные в форму прям сейчас, и&nbsp;мы сразу Вам вышлем подборку первых видеоуроков.<br>Убедитесь сами!</div>
+        <form action="#" class="form freevideo__form">
+          <div class="input-group freevideo__input-group">
+            <input type="text" class="input form__input freevideo__input" name="userName" id="user-name-freevideo" placeholder="Имя">
+          </div>
+          <div class="input-group freevideo__input-group">
+            <input type="tel" class="input form__input freevideo__input" name="userPhone" id="user-phone-freevideo" placeholder="Телефон">
+          </div>
+          <div class="input-group freevideo__input-group">
+            <input type="email" class="input form__input freevideo__input" name="userEmail" id="user-email-freevideo" placeholder="Email">
+          </div>
+          <button class="button button--primary freevideo__button">Начать обучение</button>
+        </form>
+      </div>
+    </section>
+
   </main>
+
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
+      <form action="#" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <input type="text" class="input form__input modal__input" name="userName" id="user-name-modal" placeholder="Имя">
+        </div>
+        <div class="input-group modal__input-group">
+          <input type="tel" class="input form__input modal__input" name="userPhone" id="user-phone-modal" placeholder="Телефон">
+        </div>
+        <div class="input-group modal__input-group">
+          <input type="email" class="input form__input modal__input" name="userEmail" id="user-email-modal" placeholder="Email">
+        </div>
+        <button class="button button--primary modal__button">Начать обучение</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-thanks">
+    <div class="modal-thanks__dialog">
+      <button class="modal-thanks__close"></button>
+      <h3 class="modal-thanks__title">Спасибо за заявку!</h3>
+      <p class="modal-thanks__text">Наш менеджер свяжется с Вами через 15 минут</p>
+      <p class="modal-thanks__text">Предлагаем посетить нашу группу ВКонтакте и подписаться на новости</p>
+      <a href="https://vk.com" class="modal-thanks__link" target="_blank"><img src="img/vk.svg" alt="Вконтакте" class="modal-thanks__icon" loading="lazy"></a>
+    </div>
+  </div>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

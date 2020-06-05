@@ -52,4 +52,24 @@ h1, h2, h3, h4, h5
       color: $light
       background: transparent
       border: 1px solid $light
-    
+.input
+  font-size: 1.2rem
+  background-color: $light
+  border-radius: 4px
+  border: none
+  padding: 0.8rem 1rem
+  color: $text-secondary
+  &::placeholder
+    color: $text-secondary
+  &-group
+    position: relative
+div
+  &.invalid
+    position: absolute
+    top: -1rem
+    right: 0
+    font-size: 0.8rem
+    color: tomato
+input
+  &.invalid
+    // border: 2px solid tomato
