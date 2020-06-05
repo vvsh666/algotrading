@@ -1088,7 +1088,8 @@ div.invalid {
     overflow: hidden; }
 
 .results {
-  padding-top: 7.3rem; }
+  padding-top: 7.3rem;
+  padding-bottom: 7rem; }
   .results__row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1138,6 +1139,24 @@ div.invalid {
       font-weight: 300;
       line-height: 1.5;
       color: #061826; }
+
+.cashback {
+  padding-top: 7.6rem;
+  padding-bottom: 7.4rem;
+  background: #eaf1f7 url("../img/cashback-bg.png") no-repeat center/cover; }
+  .cashback__header {
+    max-width: 19rem;
+    margin: auto;
+    margin-bottom: 1.7rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.21;
+    color: #000000; }
+  .cashback__button {
+    display: block;
+    margin: 0 auto;
+    width: 34.6rem; }
 
 .modal {
   opacity: 0;
