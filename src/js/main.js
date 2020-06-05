@@ -93,14 +93,34 @@ modalThanks.toggleClass('modal-thanks--visible');
     },
   });
 
+  // Слайдер секции Reviews
+
+  var reviewsSwiper = new Swiper('.reviews__swiper-container', {
+    speed: 400,
+    loop: true,
+    spaceBetween: 100,
+    centeredSlides: true,
+  });
+
   // Видео в секции Simple
 
   var player;
   $('.simple__video-play').on('click', function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '360',
-      width: '640',
+    player = new YT.Player('player-simple', {
+      // height: '360',
+      // width: '640',
       videoId: 'jT8u8cawcsI',
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  });
+
+  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player-reviews', {
+      // height: '100%',
+      // width: '100%',
+      videoId: 'z1CfSiDiTJ4',
       events: {
         'onReady': onPlayerReady
       }
