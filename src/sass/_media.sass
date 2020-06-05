@@ -105,7 +105,15 @@
       justify-content: center
     &__card
       width: 48%
-
+  .questions
+    &__form
+      flex-direction: column
+      align-items: center
+    &__input
+      &-group
+        width: 50%
+    &__button
+      width: 50%
 
 @media screen and ( max-width: 768px )
   .hero
@@ -168,6 +176,12 @@
     padding-bottom: 2rem
     &__card
       width: 100%
+  .questions
+    &__input
+      &-group
+        width: 60%
+    &__button
+      width: 60%
     
 
 @media screen and ( max-width: 576px )
@@ -215,6 +229,12 @@
         margin-left: 0
   .advantage
     &__card
+      width: 90%
+  .questions
+    &__input
+      &-group
+        width: 90%
+    &__button
       width: 90%
 
 @media screen and ( max-width: 420px )

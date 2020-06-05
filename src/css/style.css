@@ -1158,6 +1158,48 @@ div.invalid {
     margin: 0 auto;
     width: 34.6rem; }
 
+.questions {
+  padding-top: 7.7rem;
+  padding-bottom: 7.6rem;
+  background-image: -o-radial-gradient(#03256c, #061826);
+  background-image: radial-gradient(#03256c, #061826); }
+  .questions__header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.6rem; }
+  .questions__descr {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 27rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1.7rem; }
+  .questions__form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .questions__input {
+    width: 100%; }
+    .questions__input-group {
+      width: 23%;
+      margin-bottom: 1.5rem; }
+  .questions__button {
+    width: 23%; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1406,7 +1448,21 @@ div.invalid {
     -ms-flex-pack: center;
     justify-content: center; }
   .advantage__card {
-    width: 48%; } }
+    width: 48%; }
+  .questions__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .questions__input-group {
+    width: 50%; }
+  .questions__button {
+    width: 50%; } }
 
 @media screen and (max-width: 768px) {
   .hero__title {
@@ -1467,7 +1523,11 @@ div.invalid {
     padding-top: 3rem;
     padding-bottom: 2rem; }
     .cost__card {
-      width: 100%; } }
+      width: 100%; }
+  .questions__input-group {
+    width: 60%; }
+  .questions__button {
+    width: 60%; } }
 
 @media screen and (max-width: 576px) {
   .hero__title {
@@ -1507,6 +1567,10 @@ div.invalid {
   .lessons__swiper-pagination {
     margin-left: 0; }
   .advantage__card {
+    width: 90%; }
+  .questions__input-group {
+    width: 90%; }
+  .questions__button {
     width: 90%; } }
 
 @media screen and (max-width: 420px) {

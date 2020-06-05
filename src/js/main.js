@@ -229,6 +229,58 @@ modalThanks.toggleClass('modal-thanks--visible');
     }
   });
 
+  //Валидация формы questions__form
+
+  $('.questions__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
+      userEmail: {
+        required: true,
+        email: true
+      },
+    },
+    messages: {
+      userName: {
+        required: "Введите имя",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Телефон обязателен",
+        minlength: "Введены не все цифры"
+      },
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal-thanks--visible');
+        },
+        error: function(response) {
+          console.error('Ошибка запроса ' + response);
+        }        
+      });
+    }
+  });
+
    //Валидация формы modal__form
 
    $('.modal__form').validate({
