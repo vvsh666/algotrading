@@ -1,0 +1,86 @@
+.footer
+  padding-top: 7.3rem
+  padding-bottom: 7.5rem
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+  &__menu
+    width: 75%
+  &__logo
+    width: 10rem
+    display: block
+    font-size: 1.5rem
+    font-weight: 300
+    line-height: 1.5
+    color: $text-secondary
+    margin-bottom: 2rem
+    text-decoration: none
+  &__nav
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    &-col
+      position: relative
+      width: 31%
+      &:not(:first-child)        
+        &::before
+          content: ''
+          position: absolute
+          top: -2.8rem
+          left: 0
+          display: block
+          width: 8.25rem
+          height: 1px
+          background-color: $border-line
+          margin-bottom: 3rem
+    &-item
+      display: block
+      max-width: 9.5rem
+      font-size: 1rem
+      font-weight: 300
+      line-height: 1.5
+      color: $link
+      margin-bottom: 0.4rem
+      text-decoration: none
+  &__contacts
+    width: 23%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+  &__form
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border: 1px solid $input-border
+    border-radius: 4px
+    padding: 0.8rem 0.8rem
+    margin-bottom: 1.3rem
+    &-email
+      font-size: 1rem
+      font-weight: 300
+      width: -webkit-fill-available
+      flex-shrink: 1
+      color: $text-primary
+      border: none
+      background: transparent
+    &-button
+      padding: 0
+      margin: 0
+      border: none
+      cursor: pointer
+      
+  &__social
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-item
+      width: 39px
+      height: 39px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      border: solid 1px $primary
