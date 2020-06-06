@@ -99,7 +99,7 @@ div.invalid {
   position: absolute;
   top: -1rem;
   right: 0;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: tomato; }
 
 .header {
@@ -1611,6 +1611,7 @@ div.invalid {
     .results__card:first-child {
       margin-right: 2rem; }
   .questions__form {
+    max-width: 22.4rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1619,11 +1620,13 @@ div.invalid {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; }
   .questions__input-group {
-    width: 50%; }
+    width: 100%; }
   .questions__button {
-    width: 50%; }
+    width: 100%; }
   .footer__menu {
     width: 100%; }
   .footer__nav-col {
@@ -1693,10 +1696,6 @@ div.invalid {
     padding-bottom: 2rem; }
     .cost__card {
       width: 100%; }
-  .questions__input-group {
-    width: 60%; }
-  .questions__button {
-    width: 60%; }
   .footer__nav-col {
     width: 23%; } }
 
@@ -1755,10 +1754,6 @@ div.invalid {
   .questions {
     padding-top: 3rem;
     padding-bottom: 3rem; }
-    .questions__input-group {
-      width: 90%; }
-    .questions__button {
-      width: 90%; }
   .footer__nav-col {
     width: 32%; } }
 

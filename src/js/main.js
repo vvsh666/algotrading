@@ -200,8 +200,8 @@ modalThanks.toggleClass('modal-thanks--visible');
     messages: {
       userName: {
         required: "Введите имя",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
       },
       userPhone: {
         required: "Телефон обязателен",
@@ -252,8 +252,8 @@ modalThanks.toggleClass('modal-thanks--visible');
     messages: {
       userName: {
         required: "Введите имя",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
       },
       userPhone: {
         required: "Телефон обязателен",
@@ -304,8 +304,8 @@ modalThanks.toggleClass('modal-thanks--visible');
     messages: {
       userName: {
         required: "Введите имя",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя не длиннее 15 букв"
+        minlength: "Имя должно быть не короче 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
       },
       userPhone: {
         required: "Телефон обязателен",
