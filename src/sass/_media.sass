@@ -83,10 +83,13 @@
   .format
     &__row
       flex-wrap: wrap
+      max-width: 45rem
+      margin-left: auto
+      margin-right: auto
     &__slide
       width: 100%
     &__card
-      width: 49%
+      width: 43%
       margin-bottom: 4rem
   .process
     &__row
@@ -100,26 +103,29 @@
     &__swiper
       &-container
         width: 100%
+      &-slide
+        &-descr
+          margin-top: 1rem
+          margin-bottom: 1rem
+    &__numeration
+      display: none
+    &-prep
+      &__swiper
+        &-container
+          display: none
   .advantage
     &__row
       justify-content: center
     &__card
       width: 48%
-  .results
+  .cost
     &__col
-      width: 50%
-      &:first-child
-        width: 100%
-        margin-bottom: 2rem
+      &:not(:first-child)
+        &::before
+          left: -0.5rem
+  .results
     &__header
-      max-width: 32rem
-    &__text
-      max-width: 24rem
-    &__card
-      margin-left: 0
-      max-width: 20rem
-      &:first-child
-        margin-right: 2rem
+      font-size: 2.2rem
   .questions
     &__form
       max-width: 22.4rem
@@ -175,6 +181,7 @@
         display: none
   .lessons
     padding-top: 3rem
+    padding-bottom: 3rem
     &-prep
       &__swiper
         &-container
@@ -192,6 +199,7 @@
         &-prev, &-next
           width: 50%
           flex-grow: 0
+          justify-content: center
           margin-bottom: 2rem
         &-prev
           order: -2
@@ -200,11 +208,22 @@
   .advantage
     padding-top: 3rem
     padding-bottom: 2rem
-  .cost
-    padding-top: 3rem
-    padding-bottom: 2rem
+  .results
+    &__col
+      width: 50%
+      &:first-child
+        width: 100%
+        margin-bottom: 2rem
+    &__header
+      font-size: 2.25rem
+      max-width: 32rem
+    &__text
+      max-width: 24rem
     &__card
-      width: 100%
+      margin-left: 0
+      max-width: 20rem
+      &:first-child
+        margin-right: 2rem
   .footer
     &__nav
       &-col
@@ -236,34 +255,89 @@
     &__button
       display: none
   .format
+    padding-top: 3rem
+    & > .container
+      &::after
+        margin-top: 3rem
     &__card
       margin-left: auto
       margin-right: auto
-      width: 90%
+      width: 20rem
       text-align: center
+      &-image
+        display: flex
+        justify-content: center
+        align-items: center
+  .process
+    padding-top: 3rem
+    padding-bottom: 3rem
+    &__section
+      &-header
+        text-align: center
+        margin-bottom: 3rem
+    &__card
+      margin-bottom: 2rem
+      &-value
+        margin-bottom: 1rem
+      &-time
+        margin-bottom: 1rem
+      &-descr
+        width: 85%
   .lessons
     &__swiper
       &-slide
+        &-title
+          margin-bottom: 1rem
         &-descr
           margin-bottom: 1rem
-    &__numeration
-      flex-wrap: wrap
-    &__number
-      width: 100%
-      margin-bottom: 1rem
-    &__swiper
-      &-pagination
-        margin-left: 0
   .advantage
     &__card
       width: 90%
+  .cost
+    padding-top: 3rem
+    padding-bottom: 2rem
+    &__section
+      &-descr
+        margin-bottom: 1rem
+    &__col
+      padding-bottom: 1rem
+      padding-top: 1rem
+      width: 100%
+      &:not(:first-child)
+        &::before
+          position: absolute
+          left: 50%
+          top: 0
+          transform: translateX(-50%)
+          content: ''
+          display: block
+          width: 80%
+          height: 1px
+          background-color: $border-line
+    &__card
+      height: 21rem
+  .freevideo
+    padding-top: 3rem
+    padding-bottom: 3rem
   .results
     padding-top: 3rem
     padding-bottom: 3rem
     &__col
       width: 100%
+    &__header
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+    &__text
+      margin-left: auto
+      margin-right: auto
+      text-align: center
     &__card
+      margin-left: auto
+      margin-right: auto
+      text-align: center
       &:first-child
+        margin-right: auto
         margin-bottom: 2rem
   .cashback
     padding-top: 3rem
@@ -342,8 +416,7 @@
       &-light
         transition: 0.2s
         &:hover
-          color: $primary
-          border-color: $primary
+          box-shadow: 0 0 20px rgba($light, 0.5)
   .logo
     &__text
       &:hover

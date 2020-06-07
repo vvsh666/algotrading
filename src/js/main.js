@@ -17,30 +17,50 @@ var modal = $('.modal'),
     closeBtnThanks = $('.modal-thanks__close'),
     linkThanks = $('.modal-thanks__link');
 
+// Вызов модального окна    
 modalBtn.on('click', function() {
 modal.toggleClass('modal--visible');
 });
 
+// Закрытие модального окна по кнопке close
 closeBtn.on('click', function() {
 modal.toggleClass('modal--visible');
 });
 
+// Закрытие модального окна по кнопке Esc
 $(document).on('keydown', function(event) {
 if (event.code == 'Escape' && modal.hasClass('modal--visible')) {
 modal.removeClass('modal--visible');
 }
 });
 
+// Закрытие модального окна по клику вне модального окна
 $(document).on('click', function(event) {
 if ($(event.target).is('.modal--visible')) {
-modal.toggleClass('modal--visible');
+modal.removeClass('modal--visible');
 }
 });
 
+//Закрытие модального окна благодарности по кнопке Esc
+$(document).on('keydown', function(event) {
+if (event.code == 'Escape' && modalThanks.hasClass('modal-thanks--visible')) {
+modalThanks.removeClass('modal-thanks--visible');
+}
+});
+
+// Закрытие модального окна благодарности по клику вне модального окна
+$(document).on('click', function(event) {
+if ($(event.target).is('.modal-thanks--visible')) {
+modalThanks.removeClass('modal-thanks--visible');
+}
+});
+
+// Закрытие модального окна благодарности по кнопке close
 closeBtnThanks.on('click', function() {
 modalThanks.toggleClass('modal-thanks--visible');
 });
 
+// Закрытие модального окна благодарности по кнопке перехода в ВК
 linkThanks.on('click', function() {
 modalThanks.toggleClass('modal-thanks--visible');
 });
@@ -100,6 +120,10 @@ modalThanks.toggleClass('modal-thanks--visible');
     loop: true,
     spaceBetween: 100,
     centeredSlides: true,
+    navigation: {
+      nextEl: '.reviews__button-next',
+      prevEl: '.reviews__button-prev',
+    },
   });
 
   // Видео в секции Simple
@@ -116,11 +140,35 @@ modalThanks.toggleClass('modal-thanks--visible');
     });
   });
 
+   // Видео в секции reviews
+
   $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player-reviews', {
       // height: '100%',
       // width: '100%',
       videoId: 'z1CfSiDiTJ4',
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  });
+
+  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player-reviews-2', {
+      // height: '100%',
+      // width: '100%',
+      videoId: '5feSiJDOsfY',
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  });
+
+  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player-reviews-3', {
+      // height: '100%',
+      // width: '100%',
+      videoId: 'DfHLBK36Qtg',
       events: {
         'onReady': onPlayerReady
       }

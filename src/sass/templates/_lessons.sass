@@ -1,7 +1,7 @@
 .lessons
   padding-top: 6.9rem
   padding-bottom: 7.4rem
-  background-image: radial-gradient(#03256c, $text-primary)
+  background: url('../img/lessons-bg.png') no-repeat left bottom, radial-gradient(#03256c, $text-primary)
   &__row
     display: flex
     justify-content: space-between
@@ -122,6 +122,8 @@
         justify-content: flex-start
       &-next
         justify-content: flex-end
+    &-next, &-prev
+      cursor: pointer
 
 
 .swiper
