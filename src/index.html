@@ -105,25 +105,28 @@
             <div class="create__title"><span class="create__title create__title--bold">Сколько бы Вы заработали,</span> используя торгового робота</div>
             <div class="create__text">Просто введите данные и сравните&nbsp;результаты </div>
           </div>
-          <div class="col-30 create__col-30">
-            <div class="create__input-group">
-              <input type="text" class="create__input" id="numTool" placeholder="0">
-              <label for="numTool" class="create__label">Количество инструментов, по которым Вы торгуете</label>
+          <form action="#" class="create__form">
+            <div class="create__form-row">
+              <div class="create__input-group">
+                <input type="text" class="create__input" id="numTool" placeholder="0">
+                <label for="numTool" class="create__label">Количество инструментов, по которым Вы торгуете</label>
+              </div>
+              <div class="create__input-group">
+                <input type="text" class="create__input" id="profit" placeholder="16">
+                <label for="profit" class="create__label">Средняя месячная прибыль (%)</label>
+              </div>
             </div>
-            <div class="create__input-group">
-              <input type="text" class="create__input" id="numToolBroker" placeholder="2">
-              <label for="numToolBroker" class="create__label">Количество инструментов Вашего брокера</label>
+            <div class="create__form-row">
+              <div class="create__input-group">
+                <input type="text" class="create__input" id="numToolBroker" placeholder="2">
+                <label for="numToolBroker" class="create__label">Количество инструментов Вашего брокера</label>
+              </div>
+              <div class="create__input-group">
+                <input type="text" class="create__input" id="sum" placeholder="5 000">
+                <label for="sum" class="create__label">Сумма депозита ($)</label>
+              </div>
             </div>
-          </div>
-          <div class="col-30 create__col-30">
-            <div class="create__input-group">
-              <input type="text" class="create__input" id="profit" placeholder="16">
-              <label for="profit" class="create__label">Средняя месячная прибыль (%)</label>
-            </div>
-            <div class="create__input-group">
-              <input type="text" class="create__input" id="sum" placeholder="5 000">
-              <label for="sum" class="create__label">Сумма депозита ($)</label>
-            </div>
+          </form>
           </div>
         </div>
         <button class="button create__button button--primary">Просчитать прибыль на 2016 год</button>
@@ -908,8 +911,10 @@
         </div>
         <div class="footer__contacts">
           <form action="#" class="footer__form">
-            <input type="email" class="footer__form-email" placeholder="E-mail рассылка">
-            <button class="footer__form-button"><img src="img/email.svg" alt="email" class="footer__form-img" loading="lazy"></button>
+            <div class="input-group footer__input-group">
+              <input type="email" class="footer__form-email" placeholder="E-mail рассылка" name="userEmail" id="user-email-footer">
+              <button class="footer__form-button"><img src="img/email.svg" alt="email" class="footer__form-img" loading="lazy"></button>
+            </div>
           </form>
           <div class="footer__social">
             <a href="https://www.facebook.com/" class="footer__social-item" target="_blank"><img src="img/facebook.svg" alt="facebook" class="footer__social-icon" loading="lazy"></a>
@@ -949,6 +954,14 @@
       <p class="modal-thanks__text">Наш менеджер свяжется с Вами через 15 минут</p>
       <p class="modal-thanks__text">Предлагаем посетить нашу группу ВКонтакте и подписаться на новости</p>
       <a href="https://vk.com" class="modal-thanks__link" target="_blank"><img src="img/vk.svg" alt="Вконтакте" class="modal-thanks__icon" loading="lazy"></a>
+    </div>
+  </div>
+
+  <div class="modal-thanks-spam">
+    <div class="modal-thanks-spam__dialog">
+      <button class="modal-thanks-spam__close"></button>
+      <h3 class="modal-thanks-spam__title">Спасибо за подписку!</h3>
+      <p class="modal-thanks-spam__text">Вы будете получать только нужные новости</p>
     </div>
   </div>
 

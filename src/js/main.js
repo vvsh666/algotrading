@@ -65,6 +65,27 @@ linkThanks.on('click', function() {
 modalThanks.toggleClass('modal-thanks--visible');
 });
 
+modalThanksSpam = $('.modal-thanks-spam'),
+closeBtnThanksSpam = $('.modal-thanks-spam__close');
+
+//Закрытие модального окна благодарности по кнопке Esc
+$(document).on('keydown', function(event) {
+  if (event.code == 'Escape' && modalThanks.hasClass('modal-thanks-spam--visible')) {
+  modalThanksSpam.removeClass('modal-thanks-spam--visible');
+  }
+  });
+  
+  // Закрытие модального окна благодарности по клику вне модального окна
+  $(document).on('click', function(event) {
+  if ($(event.target).is('.modal-thanks-spam--visible')) {
+  modalThanksSpam.removeClass('modal-thanks-spam--visible');
+  }
+  });
+  
+  // Закрытие модального окна благодарности по кнопке close
+  closeBtnThanksSpam.on('click', function() {
+  modalThanksSpam.toggleClass('modal-thanks-spam--visible');
+  });
 
   // Слайдер секции Benefit
 
@@ -373,6 +394,39 @@ modalThanks.toggleClass('modal-thanks--visible');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal-thanks--visible');
+        },
+        error: function(response) {
+          console.error('Ошибка запроса ' + response);
+        }        
+      });
+    }
+  });
+
+  // Валидация формы footer__form
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userEmail: {
+        required: true,
+        email: true
+      },
+    },
+    messages: {
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalThanksSpam.toggleClass('modal-thanks-spam--visible');
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);

@@ -54,13 +54,6 @@
     flex-direction: column
     justify-content: flex-start
   &__form
-    display: flex
-    justify-content: space-between
-    align-items: center
-    border: 1px solid $input-border
-    border-radius: 4px
-    padding: 0.8rem 0.8rem
-    margin-bottom: 1.3rem
     &-email
       font-size: 1rem
       font-weight: 300
@@ -75,6 +68,15 @@
       border: none
       cursor: pointer
       background: transparent
+  &__input
+    &-group
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border: 1px solid $input-border
+      border-radius: 4px
+      padding: 0.8rem 0.8rem
+      margin-bottom: 1.3rem
       
   &__social
     display: flex
