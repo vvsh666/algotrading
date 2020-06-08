@@ -138,14 +138,18 @@ $(document).on('keydown', function(event) {
 
   var reviewsSwiper = new Swiper('.reviews__swiper-container', {
     speed: 400,
-    loop: true,
+    // loop: true,
     spaceBetween: 100,
-    // centeredSlides: true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.reviews__button-next',
       prevEl: '.reviews__button-prev',
     },
   });
+
+  // Постановка видео на паузу при смене слайда
+
+  // reviewsSwiper.on('slideChange', pauseVideo());
 
   // Видео в секции Simple
 
@@ -189,7 +193,7 @@ $(document).on('keydown', function(event) {
     player = new YT.Player('player-reviews-3', {
       height: '100%',
       width: '100%',
-      videoId: '5feSiJDOsfY',
+      videoId: 'DfHLBK36Qtg',
       events: {
         'onReady': onPlayerReady
       }
@@ -198,6 +202,10 @@ $(document).on('keydown', function(event) {
 
   function onPlayerReady(event) {
     event.target.playVideo();
+  };
+
+  function pauseVideo() {
+    player.pauseVideo();
   };
 
   // Слайдер секции lessons
