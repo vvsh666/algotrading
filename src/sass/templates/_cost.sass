@@ -1,6 +1,16 @@
 .cost
-  padding-top: 3.2rem
-  padding-bottom: 4.6rem
+  position: relative
+  padding-top: 7rem
+  padding-bottom: 7.6rem
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    display: block
+    width: 1px
+    height: 4.5rem
+    background-color: $border-line
   &__section
     &-header
       margin-bottom: 1.4rem

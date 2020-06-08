@@ -1,3 +1,7 @@
+@media screen and ( min-width: 1600px )
+  .hero
+    background: url('../img/hero-bg.png') no-repeat center center / cover
+
 @media screen and ( max-width: 1300px )
   html
     font-size: 15px
@@ -21,8 +25,6 @@
   .hero
     padding-top: 6rem
     padding-bottom: 25rem
-    // background-image: none
-    // background-color: $input-border
   .why
     &__wrapper
       flex-wrap: wrap
@@ -104,9 +106,13 @@
       &-container
         width: 100%
       &-slide
+        &-item
+          &-text
+            max-width: 32rem
         &-descr
           margin-top: 1rem
           margin-bottom: 1rem
+          max-width: 32rem
     &__numeration
       display: none
     &-prep
@@ -158,10 +164,13 @@
       font-size: 2rem
   .create
     &__col-30
-      width: 51%
+      width: 100%
       margin: 0 auto
-      &:first-child
-        width: 100%
+    &__input
+      &-group
+        width: 20.6rem
+        margin-left:  auto
+        margin-right: auto
   .benefit
     &__wrapper
       width: 100%
@@ -174,11 +183,6 @@
           display: none
         &-next
           display: none
-    &__button
-      &-prev
-        display: none
-      &-next
-        display: none
   .lessons
     padding-top: 3rem
     padding-bottom: 3rem
@@ -238,22 +242,47 @@
       font-size: 1.5rem
     &__block
       flex-wrap: wrap
+      &-buttons
+        width: 29rem
+        margin-right: 0
       &-text
         margin-top: 2rem
         max-width: 80%
+    &__button
+      width: 100%
   .why
+    & > .container
+      &::after
+        margin-top: 3rem
     &__tag
       &-number
         font-size: 15rem
         line-height: 12rem
   .create
-    &__col-30
-      width: 100%
+    padding-top: 3rem
+    padding-bottom: 3rem
+    &__text
+      max-width: 20rem
+    &__input
+      &-group
+        margin-bottom: 2.5rem
     &__button
       width: 22rem
-  .simple
+  .study
+    padding-top: 3.5rem
+    padding-bottom: 3.5rem
+  .benefit
+    background-color: #f8fafc
     &__button
-      display: none
+      &-prev
+        display: none
+      &-next
+        display: none
+  .simple
+    padding-top: 3rem
+    &__button
+      min-width: 2rem
+      width: 100%
   .format
     padding-top: 3rem
     & > .container
@@ -296,6 +325,8 @@
   .cost
     padding-top: 3rem
     padding-bottom: 2rem
+    &::before
+      height: 2rem
     &__section
       &-descr
         margin-bottom: 1rem
@@ -361,7 +392,6 @@
       max-width: 1.3rem
     &__text
       font-size: 1.4rem
-
   .hero
     &__block
       &-buttons
@@ -369,6 +399,23 @@
         margin-right: 0
     &__button
       width: 100%
+  .study
+    &__text
+      max-width: 21rem
+  .lessons
+    padding-bottom: 2.4rem
+    &__swiper
+      &-slide
+        &-item
+          &-text
+            font-size: 1.4rem
+    &__line
+      margin-bottom: 1rem
+    &__button
+      margin-bottom: 1rem
+  .simple
+    &__video
+      min-height: 200px
   .format
     &__slide
       padding-left: 1.5rem
@@ -402,8 +449,6 @@
 // Медиазапрос для Hover эффектов
 @media screen and ( min-width: 991px )
   .button
-    &:hover
-      cursor: pointer
     &--primary
       transition: box-shadow 0.2s
       &:hover
@@ -437,15 +482,15 @@
   .phone
     &:hover
       color: $primary
-  .benefit
-    &__button
-      &-prev, &-next
-        &:hover
-          cursor: pointer
   .simple
     &__video-play
       &:hover
-        cursor: pointer
+        box-shadow: 0 0 20px rgba($light, 0.5)
+  .reviews
+    &__video
+      &-play
+        &:hover
+          box-shadow: 0 0 20px rgba($light, 0.5)
   .footer
     &__logo
       transition: 0.3s
