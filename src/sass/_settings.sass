@@ -53,6 +53,19 @@ h1, h2, h3, h4, h5
       color: $light
       background: transparent
       border: 1px solid $light
+  &-up
+    display: none
+    position: fixed
+    right: 1rem
+    bottom: 1rem
+    width: 3rem
+    height: 3rem
+    border: 2px solid $primary
+    border-radius: 50%
+    background: $light url('../img/scroll-up.svg') no-repeat center
+    box-shadow: 0 0 5px $primary
+    &:hover
+      cursor: pointer
 .input
   font-size: 1.2rem
   background-color: $light

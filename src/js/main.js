@@ -17,6 +17,26 @@ var modal = $('.modal'),
     closeBtnThanks = $('.modal-thanks__close'),
     linkThanks = $('.modal-thanks__link');
 
+// Появление кнопки ScrollUp
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+    btnUp.fadeIn();
+  } else {
+    btnUp.fadeOut();
+  }
+});
+
+// Возврат в начало страницы при нажатии на BtnUp
+
+btnUp.click(function() {
+  $('body, html').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
+
+
 // Вызов модального окна    
 modalBtn.on('click', function() {
 modal.toggleClass('modal--visible');

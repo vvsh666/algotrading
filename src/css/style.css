@@ -75,6 +75,20 @@ h1, h2, h3, h4, h5 {
       color: #ffffff;
       background: transparent;
       border: 1px solid #ffffff; }
+  .button-up {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #0842b7;
+    border-radius: 50%;
+    background: #ffffff url("../img/scroll-up.svg") no-repeat center;
+    -webkit-box-shadow: 0 0 5px #0842b7;
+    box-shadow: 0 0 5px #0842b7; }
+    .button-up:hover {
+      cursor: pointer; }
 
 .input {
   font-size: 1.2rem;
@@ -1971,6 +1985,17 @@ div.error {
     width: 23%; } }
 
 @media screen and (max-width: 576px) {
+  .button-up {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-top: 1px solid #0842b7;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .hero {
     background: url("../img/hero-bg.png") no-repeat right -300px top -75px/87rem; }
     .hero__title {
