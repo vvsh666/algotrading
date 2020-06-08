@@ -13,7 +13,7 @@
 <body>
 
     <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
@@ -31,14 +31,14 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <a href="" class="logo menu__logo">
+        <a href="index.html" class="logo menu__logo">
           <img src="img/logo.png" alt="Логотип" class="logo__img" loading="lazy">
           <h1 class="logo__text">алготрейдинг</h1>
         </a>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Обучение торговле</a>
-          <a href="#" class="nav__item">Аналитика</a>
-          <a href="#" class="nav__item">О проекте</a>
+          <a href="#lessons" class="nav__item">Обучение торговле</a>
+          <a href="#create" class="nav__item">Аналитика</a>
+          <a href="#simple" class="nav__item">О проекте</a>
         </nav>
         <a href="tel:+74959999999" class="phone menu__phone">8 (495) <span class="phone phone--bold">999-99-99</span></a>
       </div>
@@ -55,8 +55,8 @@
           <p class="hero__descr">Всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
           <div class="hero__block">
             <div class="hero__block-buttons">
-              <button class="button button--primary hero__button" data-toggle="modal">Начать обучение</button>
-              <button class="button button--outline hero__button" data-toggle="modal">узнать подробнее</button>
+              <button class="button button--primary hero__button" data-toggle="modal" onclick="ym(64710196,'reachGoal','hero-button-1'); return true;">Начать обучение</button>
+              <button class="button button--outline hero__button" data-toggle="modal" onclick="ym(64710196,'reachGoal','hero-button-2'); return true;">узнать подробнее</button>
             </div>
             <div class="hero__block-text">Ваш собственный прибыльный торговый робот за <span class="hero__block-text hero__block-text--marker">30 дней!</span></div>
           </div>
@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <section class="section create">
+    <section class="section create" id="create">
       <div class="container">
         <h2 class="section-header create__section-header">Создайте своего<br>авторского торгового робота</h2>
         <div class="section-descr create__section-descr">получайте прибыль даже с нулевыми знаниями в сфере алгоритмической торговли</div>
@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <section class="study">
+    <section class="study" id="study">
       <div class="container">
         <div class="study__wrapper">
           <h2 class="study__text">Обучитесь алгоритмической торговле и&nbsp;уже <span class="study__text study__text--marker">через 30 дней</span>&nbsp;создайте своего&nbsp;эффективного торгового робота!</h2>
@@ -209,7 +209,7 @@
       </div>
     </section>
 
-    <section class="section simple">
+    <section class="section simple" id="simple">
       <div class="container">
         <h2 class="section-header simple__section-header"><span class="section-header section-header--bold">Всё</span> очень просто</h2>
         <div class="section-descr simple__section-descr">Никаких лишних движений во время обучения.<br>Мы с Вами будем чётко следовать<br>по разработанной нами карте обучения.</div>
@@ -296,7 +296,7 @@
       </div>
     </section>
 
-    <section class="lessons">
+    <section class="lessons" id="lessons">
       <div class="container">
         <div class="lessons__row">
 
@@ -752,10 +752,10 @@
         <div class="reviews__swiper-container">
           <div class="swiper-wrapper reviews__swiper-wrapper">
               <div class="reviews__swiper-slide swiper-slide">
-                <div class="reviews__video" id="player-reviews">
+                <div class="reviews__video" id="player-reviews-1">
                   <img src="img/reviews-1.jpg" alt="Отзыв" class="reviews__video-img" loading="lazy">
                   <script src="https://www.youtube.com/iframe_api"></script>
-                  <div class="reviews__video-play">
+                  <div class="reviews__video-play reviews__video-play-1">
                     <img src="img/video-play.svg" alt="Смотреть видео" class="reviews__video-play-img" loading="lazy">
                   </div>
                 </div>
@@ -766,7 +766,7 @@
                 <div class="reviews__video" id="player-reviews-2">
                   <img src="img/reviews-2.jpg" alt="Отзыв" class="reviews__video-img" loading="lazy">
                   <script src="https://www.youtube.com/iframe_api"></script>
-                  <div class="reviews__video-play">
+                  <div class="reviews__video-play reviews__video-play-2">
                     <img src="img/video-play.svg" alt="Смотреть видео" class="reviews__video-play-img" loading="lazy">
                   </div>
                 </div>
@@ -777,7 +777,7 @@
                 <div class="reviews__video" id="player-reviews-3">
                   <img src="img/reviews-3.jpg" alt="Отзыв" class="reviews__video-img" loading="lazy">
                   <script src="https://www.youtube.com/iframe_api"></script>
-                  <div class="reviews__video-play">
+                  <div class="reviews__video-play reviews__video-play-3">
                     <img src="img/video-play.svg" alt="Смотреть видео" class="reviews__video-play-img" loading="lazy">
                   </div>
                 </div>
@@ -890,19 +890,19 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__menu">
-          <a href="#" class="footer__logo">Алготрейдинг</a>
+          <a href="index.html" class="footer__logo">Алготрейдинг</a>
           <div class="footer__nav">
             <div class="footer__nav-col">
-              <a href="#" class="footer__nav-item">Обучение алгоритмической торговле</a>
+              <div class="footer__nav-item footer__nav-subtitle">Обучение алгоритмической торговле</div>
             </div>
             <div class="footer__nav-col">
-              <a href="#" class="footer__nav-item">Аналитика</a>
-              <a href="#" class="footer__nav-item">О проекте</a>
-              <a href="#" class="footer__nav-item">Контакты</a>
+              <a href="#create" class="footer__nav-item">Аналитика</a>
+              <a href="#simple" class="footer__nav-item">О проекте</a>
+              <a href="#!" class="footer__nav-item">Контакты</a>
             </div>
             <div class="footer__nav-col">
-              <a href="#" class="footer__nav-item">Вопросы и ответы</a>
-              <a href="#" class="footer__nav-item">Записаться на курс</a>
+              <a href="#!" class="footer__nav-item">Вопросы и ответы</a>
+              <a href="#study" class="footer__nav-item">Записаться на курс</a>
             </div>
           </div>
         </div>
@@ -912,10 +912,10 @@
             <button class="footer__form-button"><img src="img/email.svg" alt="email" class="footer__form-img" loading="lazy"></button>
           </form>
           <div class="footer__social">
-            <a href="#" class="footer__social-item"><img src="img/facebook.svg" alt="facebook" class="footer__social-icon" loading="lazy"></a>
-            <a href="#" class="footer__social-item"><img src="img/vkontakte.svg" alt="vkontakte" class="footer__social-icon" loading="lazy"></a>
-            <a href="#" class="footer__social-item"><img src="img/youtube.svg" alt="youtube" class="footer__social-icon" loading="lazy"></a>
-            <a href="#" class="footer__social-item"><img src="img/instagram.svg" alt="instagram" class="footer__social-icon" loading="lazy"></a>
+            <a href="https://www.facebook.com/" class="footer__social-item" target="_blank"><img src="img/facebook.svg" alt="facebook" class="footer__social-icon" loading="lazy"></a>
+            <a href="https://vk.com/" class="footer__social-item" target="_blank"><img src="img/vkontakte.svg" alt="vkontakte" class="footer__social-icon" loading="lazy"></a>
+            <a href="https://www.youtube.com/?gl=RU" class="footer__social-item" target="_blank"><img src="img/youtube.svg" alt="youtube" class="footer__social-icon" loading="lazy"></a>
+            <a href="https://www.instagram.com/" class="footer__social-item" target="_blank"><img src="img/instagram.svg" alt="instagram" class="footer__social-icon" loading="lazy"></a>
             <a href="#" class="footer__social-item"><img src="img/scroll-up.svg" alt="Вверх" class="footer__social-icon" loading="lazy"></a>
           </div>
         </div>
@@ -927,7 +927,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-      <form action="#" class="form modal__form">
+      <form action="#" class="form modal__form" onsubmit="ym(64710196,'reachGoal','modal-form'); return true;">
         <div class="input-group modal__input-group">
           <input type="text" class="input form__input modal__input" name="userName" id="user-name-modal" placeholder="Имя">
         </div>

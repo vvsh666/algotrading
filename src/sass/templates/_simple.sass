@@ -1,6 +1,16 @@
 .simple
+  position: relative
   padding-top: 6.9rem
   padding-bottom: 0
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    display: block
+    width: 1px
+    height: 4.5rem
+    background-color: $border-line
   & > .container
     &::after
       content: ''

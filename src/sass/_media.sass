@@ -212,6 +212,9 @@
   .advantage
     padding-top: 3rem
     padding-bottom: 2rem
+  .reviews
+    &__video
+      height: 22.4rem
   .results
     &__col
       width: 50%
@@ -236,6 +239,7 @@
 
 @media screen and ( max-width: 576px )
   .hero
+    background: url('../img/hero-bg.png') no-repeat right -300px top -75px / 87rem
     &__title
       font-size: 2.3rem
     &__subtitle
@@ -280,6 +284,8 @@
         display: none
   .simple
     padding-top: 3rem
+    &::before
+      height: 2rem
     &__button
       min-width: 2rem
       width: 100%
@@ -319,6 +325,10 @@
           margin-bottom: 1rem
         &-descr
           margin-bottom: 1rem
+    &__button
+      min-width: 61%
+    &__bonus
+      align-items: center
   .advantage
     &__card
       width: 90%
@@ -350,6 +360,11 @@
   .freevideo
     padding-top: 3rem
     padding-bottom: 3rem
+  .reviews
+    padding-bottom: 3rem
+    padding-top: 3rem
+    &__video
+      height: 16.9rem
   .results
     padding-top: 3rem
     padding-bottom: 3rem
@@ -424,12 +439,16 @@
       width: 65%
       margin-left: auto
       margin-right: auto
+  .reviews
+    &__video
+      height: 14.2rem
   .footer
     padding-top: 3rem
     padding-bottom: 4rem
     &__logo
       margin-left: auto
       margin-right: auto
+      margin-bottom: 0
     &__nav
       &-col
         width: 100%
@@ -441,7 +460,10 @@
       &-item
         margin-left: auto
         margin-right: auto
+        margin-bottom: 1rem
         text-align: center
+        &:first-child
+          margin-top: 1rem
         
 
 

@@ -119,7 +119,7 @@ modalThanks.toggleClass('modal-thanks--visible');
     speed: 400,
     loop: true,
     spaceBetween: 100,
-    centeredSlides: true,
+    // centeredSlides: true,
     navigation: {
       nextEl: '.reviews__button-next',
       prevEl: '.reviews__button-prev',
@@ -131,8 +131,8 @@ modalThanks.toggleClass('modal-thanks--visible');
   var player;
   $('.simple__video-play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player-simple', {
-      // height: '360',
-      // width: '640',
+      height: '100%',
+      width: '100%',
       videoId: 'jT8u8cawcsI',
       events: {
         'onReady': onPlayerReady
@@ -142,10 +142,10 @@ modalThanks.toggleClass('modal-thanks--visible');
 
    // Видео в секции reviews
 
-  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player-reviews', {
-      // height: '100%',
-      // width: '100%',
+  $('.reviews__video-play-1').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player-reviews-1', {
+      height: '100%',
+      width: '100%',
       videoId: 'z1CfSiDiTJ4',
       events: {
         'onReady': onPlayerReady
@@ -153,10 +153,10 @@ modalThanks.toggleClass('modal-thanks--visible');
     });
   });
 
-  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
+  $('.reviews__video-play-2').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player-reviews-2', {
-      // height: '100%',
-      // width: '100%',
+      height: '100%',
+      width: '100%',
       videoId: '5feSiJDOsfY',
       events: {
         'onReady': onPlayerReady
@@ -164,11 +164,11 @@ modalThanks.toggleClass('modal-thanks--visible');
     });
   });
 
-  $('.reviews__video-play').on('click', function onYouTubeIframeAPIReady() {
+  $('.reviews__video-play-3').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player-reviews-3', {
-      // height: '100%',
-      // width: '100%',
-      videoId: 'DfHLBK36Qtg',
+      height: '100%',
+      width: '100%',
+      videoId: '5feSiJDOsfY',
       events: {
         'onReady': onPlayerReady
       }
