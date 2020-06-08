@@ -435,8 +435,69 @@ $(document).on('keydown', function(event) {
     }
   });
 
+    // Валидация формы create__form
+
+    $('.create__form').validate({
+      errorClass: "error",
+      errorElement: "div",
+      rules: {
+        numTool: {
+          required: true,
+          number: true
+        },
+        profit: {
+          required: true,
+          number: true
+        },
+        numToolBroker: {
+          required: true,
+          number: true
+        },
+        sum: {
+          required: true,
+          // number: true
+        },
+      },
+      messages: {
+        numTool: {
+          required: "Введите данные",
+          number: "Только цифры"
+        },
+        profit: {
+          required: "Введите данные",
+          number: "Только цифры"
+        },
+        numToolBroker: {
+          required: "Введите данные",
+          number: "Только цифры"
+        },
+        sum: {
+          required: "Введите данные",
+          // number: "Только цифры"
+        },
+      },
+/*       submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            modalThanksSpam.toggleClass('modal-thanks-spam--visible');
+          },
+          error: function(response) {
+            console.error('Ошибка запроса ' + response);
+          }        
+        });
+      } */
+    });
+
     // Маска для номера телефона
 
     $('[type=tel]').mask('+7 (000) 000-00-00');
+
+    // Маска для поля Сумма депозита
+
+    $('#sum').mask('### ### ###000 000 000', { reverse: true });
 
 });

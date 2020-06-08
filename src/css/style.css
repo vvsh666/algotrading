@@ -103,6 +103,13 @@ div.invalid {
   font-size: 0.85rem;
   color: tomato; }
 
+div.error {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  font-size: 0.85rem;
+  color: tomato; }
+
 .header {
   position: fixed;
   top: 0;
@@ -411,6 +418,7 @@ div.invalid {
     flex-shrink: 1;
     margin: 0 auto; }
     .create__form-row {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -426,6 +434,15 @@ div.invalid {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+      .create__form-row:first-of-type::after {
+        position: absolute;
+        bottom: 2.1rem;
+        left: 0;
+        content: '';
+        display: block;
+        width: 41rem;
+        height: 1px;
+        background-color: #eaf1f7; }
   .create__input {
     max-width: 6.125rem;
     font-size: 1.125rem;
@@ -445,6 +462,7 @@ div.invalid {
     .create__input::placeholder {
       color: #000000; }
     .create__input-group {
+      position: relative;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1878,6 +1896,8 @@ div.invalid {
     width: 80%;
     margin-left: auto;
     margin-right: auto; }
+    .create__form-row:first-of-type::after {
+      display: none; }
   .create__input-group {
     width: 20.7rem;
     margin-left: auto;

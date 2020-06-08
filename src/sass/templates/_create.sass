@@ -28,10 +28,22 @@
     flex-shrink: 1
     margin: 0 auto
     &-row
+      position: relative
       display: flex
       justify-content: flex-start
       align-items: center
       flex-wrap: wrap
+      &:first-of-type
+        &::after
+          position: absolute
+          bottom: 2.1rem
+          left: 0
+          content: ''
+          display: block
+          width: 41rem
+          height: 1px
+          background-color: $border-line
+        
   &__input
     max-width: 6.125rem
     font-size: 1.125rem
@@ -43,6 +55,7 @@
     &::placeholder
       color: $text-dark
     &-group
+      position: relative
       display: flex
       justify-content: flex-start
       align-items: center
