@@ -193,7 +193,9 @@ $(document).on('keydown', function(event) {
 
   // Постановка видео на паузу при смене слайда
 
-  // reviewsSwiper.on('slideChange', pauseVideo());
+  reviewsSwiper.on('slideChange', function() {
+    player.stopVideo()
+  });
 
   // Видео в секции Simple
 
@@ -218,7 +220,7 @@ $(document).on('keydown', function(event) {
       videoId: 'z1CfSiDiTJ4',
       events: {
         'onReady': onPlayerReady
-      }
+       }
     });
   });
 
@@ -248,9 +250,6 @@ $(document).on('keydown', function(event) {
     event.target.playVideo();
   };
 
-  function pauseVideo() {
-    player.pauseVideo();
-  };
 
   // Слайдер секции lessons
 
