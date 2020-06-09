@@ -2133,8 +2133,14 @@ div.error {
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: none;
     box-shadow: none; }
+  .phone {
+    font-size: 1.2rem; }
+  .logo__img {
+    max-width: 1.2rem; }
+  .logo__text {
+    font-size: 1.2rem; }
   .nav {
-    width: 90%; }
+    width: 85%; }
   .hero {
     background: url("../img/hero-bg.png") no-repeat right -300px top -75px/87rem; }
     .hero__title {
@@ -2299,11 +2305,15 @@ div.error {
 
 @media screen and (max-width: 415px) {
   .phone {
-    font-size: 1.1rem; }
+    font-size: 1rem; }
   .logo__img {
-    max-width: 1.3rem; }
+    max-width: 1.1rem; }
   .logo__text {
-    font-size: 1.4rem; }
+    font-size: 1.1rem; }
+  .menu__contacts {
+    margin-left: 1rem; }
+  .menu__hamburger {
+    margin-left: 1rem; }
   .hero__block-buttons {
     width: 100%;
     margin-right: 0; }
