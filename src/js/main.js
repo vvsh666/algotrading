@@ -494,15 +494,15 @@ $(document).on('keydown', function(event) {
       rules: {
         numTool: {
           required: true,
-          number: true
+          // number: true
         },
         profit: {
           required: true,
-          number: true
+          // number: true
         },
         numToolBroker: {
           required: true,
-          number: true
+          // number: true
         },
         sum: {
           required: true,
@@ -512,15 +512,15 @@ $(document).on('keydown', function(event) {
       messages: {
         numTool: {
           required: "Введите данные",
-          number: "Только цифры"
+          // number: "Только цифры"
         },
         profit: {
           required: "Введите данные",
-          number: "Только цифры"
+          // number: "Только цифры"
         },
         numToolBroker: {
           required: "Введите данные",
-          number: "Только цифры"
+          // number: "Только цифры"
         },
         sum: {
           required: "Введите данные",
@@ -547,26 +547,39 @@ $(document).on('keydown', function(event) {
 
     // Маска для поля Сумма депозита
 
-    $('#sum').mask('### ### ###000 000 000', { reverse: true });
+    $('#sum').mask('000 000 000', { reverse: true });
+
+    $('#numTool, #profit, #numToolBroker').mask('00000');
+
+
 
     // Гамбургер меню
 
     const menu = document.querySelector('.nav'),
-    menuItem = document.querySelectorAll('.nav_item'),
+    menuItem = document.querySelectorAll('.nav__item'),
     hamburger = document.querySelector('.hamburger');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('hamburger--active');
         menu.classList.toggle('nav--active');
     });
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
+    menuItem.forEach(function(item) {
+        item.addEventListener('click', function () {
             hamburger.classList.toggle('hamburger--active');
-            menu.classList.toggle('menu--active');
+            menu.classList.toggle('nav--active');
         })
     });
 
+    //Плавный переход по якорным ссылкам
+
+    $("body").on('click', '[href*="#"]', function(e){
+      var fixed_offset = 30;
+      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+      e.preventDefault();
+    });
+
     new WOW().init();
+
 
 });
