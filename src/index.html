@@ -40,7 +40,15 @@
           <a href="#create" class="nav__item">Аналитика</a>
           <a href="#simple" class="nav__item">О проекте</a>
         </nav>
-        <a href="tel:+74959999999" class="phone menu__phone">8 (495) <span class="phone phone--bold">999-99-99</span></a>
+        <div class="menu__contacts">
+          <a href="tel:+74959999999" class="phone menu__phone">8 (495) <span class="phone phone--bold">999-99-99</span></a>
+          <div class="hamburger menu__hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </div>
+        </div>
+        
       </div>
     </div>
   </header>
@@ -105,7 +113,7 @@
             <div class="create__title"><span class="create__title create__title--bold">Сколько бы Вы заработали,</span> используя торгового робота</div>
             <div class="create__text">Просто введите данные и сравните&nbsp;результаты </div>
           </div>
-          <form action="#" class="create__form">
+          <form action="#" class="create__form" id="create__form">
             <div class="create__form-row">
               <div class="create__input-group">
                 <input type="text" class="create__input" name="numTool" id="numTool" placeholder="0">
@@ -128,7 +136,7 @@
             </div>
           </form>
         </div>
-        <button class="button create__button button--primary">Просчитать прибыль на 2016 год</button>
+        <button class="button create__button button--primary" form="create__form">Просчитать прибыль на 2016 год</button>
       </div>
     </section>
 

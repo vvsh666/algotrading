@@ -21,7 +21,52 @@
 
 @media screen and ( max-width: 992px )
   .nav
-    display: none
+    position: fixed
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    top: 0
+    left: -100%
+    width: 40%
+    height: 100vh
+    margin: 0
+    padding: 2rem 1rem
+    background-color: rgba($primary, 0.8)
+    transition: 0.6s all
+    &--active
+      left: 0
+    &__item
+      margin: 0
+      &:first-child
+        margin: 0
+      &:last-child
+        margin: 0
+      font-size: 1.5rem
+      color: $light
+  .hamburger
+    display: block
+    width: 20px
+    height: 18px
+    margin-left: 1.5rem
+    cursor: pointer
+    span
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $text-primary
+      margin-bottom: 3px
+      transition: 0.5s all
+    &--active
+      span
+        margin-bottom: -3px
+        &:nth-child(1)
+          transform: translateY(6px) rotate(-45deg)
+        &:nth-of-type(2)
+          display: none
+        &:nth-of-type(3)
+          transform: translateY(6px) rotate(45deg)
+        
+          
   .hero
     padding-top: 6rem
     padding-bottom: 25rem
@@ -154,6 +199,8 @@
 
 
 @media screen and ( max-width: 768px )
+  .nav
+    width: 50%
   .hero
     &__title
       font-size: 3.5rem
@@ -257,6 +304,8 @@
       border-radius: 0
       background-color: rgba($light, 0.8) 
       box-shadow: none
+  .nav
+    width: 90%
   .hero
     background: url('../img/hero-bg.png') no-repeat right -300px top -75px / 87rem
     &__title

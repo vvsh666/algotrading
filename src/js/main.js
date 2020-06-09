@@ -504,10 +504,8 @@ $(document).on('keydown', function(event) {
           // number: "Только цифры"
         },
       },
-/*       submitHandler: function(form) {
+      submitHandler: function(form) {
         $.ajax({
-          type: "POST",
-          url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
@@ -517,7 +515,7 @@ $(document).on('keydown', function(event) {
             console.error('Ошибка запроса ' + response);
           }        
         });
-      } */
+      }
     });
 
     // Маска для номера телефона
@@ -527,5 +525,23 @@ $(document).on('keydown', function(event) {
     // Маска для поля Сумма депозита
 
     $('#sum').mask('### ### ###000 000 000', { reverse: true });
+
+    // Гамбургер меню
+
+    const menu = document.querySelector('.nav'),
+    menuItem = document.querySelectorAll('.nav_item'),
+    hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger--active');
+        menu.classList.toggle('nav--active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger--active');
+            menu.classList.toggle('menu--active');
+        })
+    });
 
 });
