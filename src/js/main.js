@@ -555,7 +555,23 @@ $(document).on('keydown', function(event) {
 
     // Гамбургер меню
 
-    const menu = document.querySelector('.nav'),
+    const menu = $('.nav'),
+    menuItem =$('.nav__item'),
+    hamburger = $('.hamburger')
+
+    hamburger.on('click', function (){
+      hamburger.toggleClass('hamburger--active');
+      menu.toggleClass('nav--active');
+    });
+
+    menuItem.each(function (indx) {
+      $(this).on('click', function () {
+        hamburger.toggleClass('hamburger--active');
+        menu.toggleClass('nav--active');
+      })
+    });
+
+/*     const menu = document.querySelector('.nav'),
     menuItem = document.querySelectorAll('.nav__item'),
     hamburger = document.querySelector('.hamburger');
 
@@ -564,12 +580,12 @@ $(document).on('keydown', function(event) {
         menu.classList.toggle('nav--active');
     });
 
-    menuItem.forEach(function(item) {
+    menuItem.forEach(function (item) {
         item.addEventListener('click', function () {
             hamburger.classList.toggle('hamburger--active');
             menu.classList.toggle('nav--active');
         })
-    });
+    }); */
 
     //Плавный переход по якорным ссылкам
 
