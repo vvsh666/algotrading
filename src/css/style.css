@@ -106,6 +106,12 @@ h1, h2, h3, h4, h5 {
     color: #0f1c2e; }
   .input::placeholder {
     color: #0f1c2e; }
+  .input::-moz-placeholder {
+    color: #0f1c2e;
+    opacity: 1; }
+  .input::-moz-placeholder {
+    color: #0f1c2e;
+    opacity: 1; }
   .input-group {
     position: relative; }
 
@@ -488,6 +494,12 @@ div.error {
       color: #0f1c2e; }
     .create__input::placeholder {
       color: #0f1c2e; }
+    .create__input::-moz-placeholder {
+      color: #0f1c2e;
+      opacity: 1; }
+    .create__input::-moz-placeholder {
+      color: #0f1c2e;
+      opacity: 1; }
     .create__input-group {
       position: relative;
       display: -webkit-box;
