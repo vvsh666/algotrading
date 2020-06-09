@@ -567,4 +567,6 @@ $(document).on('keydown', function(event) {
         })
     });
 
+    new WOW().init();
+
 });
