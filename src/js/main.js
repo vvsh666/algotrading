@@ -194,7 +194,7 @@ $(document).on('keydown', function(event) {
   // Постановка видео на паузу при смене слайда
 
   reviewsSwiper.on('slideChange', function() {
-    player.stopVideo()
+    player.destroy()
   });
 
   // Видео в секции Simple
