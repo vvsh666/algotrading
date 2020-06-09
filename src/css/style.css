@@ -1750,6 +1750,68 @@ div.error {
         line-height: 1.2;
         text-align: center;
         color: #061826; }
+  .modal-create {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 199;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #061826; }
+    .modal-create--visible {
+      opacity: 1;
+      visibility: visible; }
+    .modal-create__dialog {
+      position: relative;
+      background: #ffffff;
+      padding: 2.357rem 2.5rem 1.928rem;
+      max-width: 25rem;
+      border: 2px dashed #0842b7;
+      border-radius: 2rem; }
+    .modal-create__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      height: 28px;
+      background: #0842b7 url("../img/close.svg") no-repeat center;
+      border: none;
+      border-radius: 50%;
+      margin-top: 12px;
+      margin-right: 13px;
+      cursor: pointer; }
+    .modal-create__title {
+      margin: 0;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #061826; }
+    .modal-create__text {
+      margin: 0;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #061826; }
 
 @media screen and (min-width: 1600px) {
   .hero {
@@ -2314,6 +2376,13 @@ div.error {
       .button--outline-light:hover {
         -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+  .button-up {
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .button-up:hover {
+      -webkit-box-shadow: inset 0 0 20px rgba(8, 66, 183, 0.8);
+      box-shadow: inset 0 0 20px rgba(8, 66, 183, 0.8); }
   .logo__text:hover {
     color: #0842b7; }
   .nav__item:hover {

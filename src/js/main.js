@@ -90,7 +90,7 @@ closeBtnThanksSpam = $('.modal-thanks-spam__close');
 
 //Закрытие модального окна благодарности по кнопке Esc
 $(document).on('keydown', function(event) {
-  if (event.code == 'Escape' && modalThanks.hasClass('modal-thanks-spam--visible')) {
+  if (event.code == 'Escape' && modalThanksSpam.hasClass('modal-thanks-spam--visible')) {
   modalThanksSpam.removeClass('modal-thanks-spam--visible');
   }
   });
@@ -105,6 +105,30 @@ $(document).on('keydown', function(event) {
   // Закрытие модального окна благодарности по кнопке close
   closeBtnThanksSpam.on('click', function() {
   modalThanksSpam.toggleClass('modal-thanks-spam--visible');
+  });
+
+  // Действия с модальным окном modal-create
+
+modalCreate = $('.modal-create'),
+closeCreate = $('.modal-create__close');
+
+//Закрытие модального окна modal__create по кнопке Esc
+$(document).on('keydown', function(event) {
+  if (event.code == 'Escape' && modalCreate.hasClass('modal-create--visible')) {
+  modalCreate.removeClass('modal-create--visible');
+  }
+  });
+  
+  // Закрытие модального окна modal__create по клику вне модального окна
+  $(document).on('click', function(event) {
+  if ($(event.target).is('.modal-create--visible')) {
+  modalCreate.removeClass('modal-create--visible');
+  }
+  });
+  
+  // Закрытие модального окна modal__create по кнопке close
+  closeCreate.on('click', function() {
+  modalCreate.toggleClass('modal-create--visible');
   });
 
   // Слайдер секции Benefit
@@ -509,7 +533,7 @@ $(document).on('keydown', function(event) {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            modalThanksSpam.toggleClass('modal-thanks-spam--visible');
+            modalCreate.toggleClass('modal-create--visible');
           },
           error: function(response) {
             console.error('Ошибка запроса ' + response);
